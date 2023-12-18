@@ -1,6 +1,6 @@
-package assets;
+package com.kevine.assets;
 
-public class mathOperatorImpl implements mathOperator {
+public class MathOperatorImpl implements MathOperator {
     @Override
     public double doMath(double operand1, double operand2, String operation) throws InvalidOperationException {
         if ("/".equals(operation) && operand2 == 0) {

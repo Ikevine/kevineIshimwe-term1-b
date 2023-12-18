@@ -10,9 +10,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import dto.doMathRequest;
-import controller.mathController;
-import assets.mathOperator;
+import com.kevine.dto.DoMathRequest;
+import com.kevine.controller.MathController;
+import com.kevine.assets.MathOperator;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -25,10 +25,10 @@ public class DoMathUnitTesting {
     private MockMvc mockMvc;
 
     @Mock
-    private mathOperator mathOperator;
+    private MathOperator mathOperator;
 
     @InjectMocks
-    private mathController mathController;
+    private MathController mathController;
 
     @Before
     public void setup() {
@@ -39,7 +39,7 @@ public class DoMathUnitTesting {
     @Test
     public void testDoMathEndpoint() throws Exception {
         // Given
-        doMathRequest request = new doMathRequest(5, 4, "*");
+        DoMathRequest request = new DoMathRequest(5, 4, "*");
         double expectedResult = 20.0;
 
         // Mocking the behavior of the mathOperator

@@ -1,13 +1,15 @@
 package assets;
 
+import com.kevine.assets.InvalidOperationException;
+import com.kevine.assets.MathOperatorImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class mathOperatorImplTest {
+public class MathOperatorImplTest {
     @Autowired
-    mathOperatorImpl mathOperator;
+    MathOperatorImpl mathOperator;
 
     @Test
     public void shouldReturnExceptionIfImpossibleDivision ()  {
@@ -34,13 +36,13 @@ public class mathOperatorImplTest {
     }
 
     @Test
-    public void shouldLogOperands() throws InvalidOperationException {
+    public void shouldLogOutOperands() throws InvalidOperationException {
         double result = mathOperator.doMath(2,2,"log");
         assertEquals(4, result);
     }
 
     @Test
-    public void shouldLnOperands() throws InvalidOperationException {
+    public void shouldLogInOperands() throws InvalidOperationException {
         double result = mathOperator.doMath(2,4,"ln");
         assertEquals(8, result);
     }
