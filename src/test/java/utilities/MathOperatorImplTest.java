@@ -1,7 +1,7 @@
 package assets;
 
-import com.kevine.assets.InvalidOperationException;
-import com.kevine.assets.MathOperatorImpl;
+import com.kevine.utilities.InvalidOperationException;
+import com.kevine.utilities.MathOperatorImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
