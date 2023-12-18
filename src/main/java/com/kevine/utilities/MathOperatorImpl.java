@@ -1,4 +1,4 @@
-package com.kevine.assets;
+package com.kevine.utilities;
 
 public class MathOperatorImpl implements MathOperator {
     @Override

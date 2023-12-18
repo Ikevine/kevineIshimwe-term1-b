@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.kevine.dto.DoMathRequest;
 import com.kevine.controller.MathController;
-import com.kevine.assets.MathOperator;
+import com.kevine.utilities.MathOperator;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 
-public class DoMathUnitTesting {
+public class MathCoUnitTesting {
 
     private MockMvc mockMvc;
 
@@ -48,7 +48,7 @@ public class DoMathUnitTesting {
 
         // When
         mockMvc.perform(post("/api/doMath")
-                        .content("{\"operand1\": 5, \"operand2\": 4, \"operation\": \"*\"}")
+                        .content("operand1: 5, operand2: 4, operation: *")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.calcResponse").value(expectedResult));

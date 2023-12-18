@@ -1,4 +1,4 @@
-package assets;
+package utilities;
 
 import com.kevine.utilities.InvalidOperationException;
 import com.kevine.utilities.MathOperatorImpl;

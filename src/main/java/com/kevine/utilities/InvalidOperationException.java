@@ -1,4 +1,4 @@
-package com.kevine.assets;
+package com.kevine.utilities;
 
 public class InvalidOperationException extends Exception {
     public InvalidOperationException(String message) {
